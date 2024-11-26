@@ -27,6 +27,9 @@ def timer(func):
 
 @timer
 def run_tests():
+    if not os.path.isdir("result"):
+        os.mkdir("result")
+
     pytest.main(['-vs', '-m', "application/explorer", '--html=result/report.html'])
 
     # 调用函数来压缩目录
