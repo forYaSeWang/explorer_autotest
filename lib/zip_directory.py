@@ -26,9 +26,9 @@ def zip_directory(directory, zip_name):
 
 if __name__ == '__main__':
     # 要压缩的目录
-    directory_to_zip = '/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result'
-    # 压缩后的 Zip 文件名
-    zip_file_name = '../result/test.zip'
+    directory_to_zip = '../result'
+    # 压缩后的 Zip 文件路径及文件名 - 注意不要搞到result这个目录了，会循环去压缩
+    zip_file_name = '../report.zip'
 
     # 调用函数来压缩目录
     zip_directory(directory_to_zip, zip_file_name)
