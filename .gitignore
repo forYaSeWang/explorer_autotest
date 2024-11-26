@@ -135,3 +135,5 @@ tangtestcase/
 .idea/
 poetry.lock
 results
+result
+.DS_Store
