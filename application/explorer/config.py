@@ -1,0 +1,1 @@
+UAT_EXPLORER_URL = "https://browser.meuat.xyz"

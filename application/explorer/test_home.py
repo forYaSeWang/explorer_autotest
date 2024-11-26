@@ -1,5 +1,7 @@
 from playwright.sync_api import sync_playwright
 
+from application.explorer import config
+
 
 def test_mobile_emulation():
     with sync_playwright() as p:
@@ -8,6 +10,5 @@ def test_mobile_emulation():
             **p.devices['iPhone 11 Pro']
         )
         page = context.new_page()
-        page.goto('https://example.com')
-
-        # 在这里编写测试步骤
+        page.goto(config.UAT_EXPLORER_URL)
+        page.set_viewport_size({"width": 1920, "height": 1080})
