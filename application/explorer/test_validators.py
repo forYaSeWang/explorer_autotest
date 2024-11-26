@@ -20,7 +20,6 @@ def test_check_validators_page():
         # 检查是否跳转至validators页面，且页面元素正常
         page.locator("span:nth-child(2)").first.click()
         page.get_by_text("Validators").nth(1).click()
-        print(page.url)
         assert 'validators' in page.url
         expect(page.locator("#root")).to_contain_text("Number of Validators")
         expect(page.locator("#root")).to_contain_text("Current Block Node:")

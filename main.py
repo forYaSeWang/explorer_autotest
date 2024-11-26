@@ -30,7 +30,7 @@ def run_tests():
     if not os.path.isdir("result"):
         os.mkdir("result")
 
-    pytest.main(['-vs', '-m', "application/explorer", '--html=result/report.html'])
+    pytest.main(['-sv', "application/explorer", '--html=result/report.html'])
 
     # 调用函数来压缩目录
     report_path = os.path.join(BASE_DIR, "result/report.zip")
