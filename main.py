@@ -33,10 +33,10 @@ def run_tests():
     pytest.main(['-sv', "application/explorer", '--html=result/report.html'])
 
     # 调用函数来压缩目录
-    report_path = os.path.join(BASE_DIR, "result/report.zip")
-    zip_directory(report_path, "result/report.zip")
+    report_path = os.path.join(BASE_DIR, "result")
+    zip_directory(report_path, "./result/report.zip")
     body = f'ME浏览器页面元素检查程序运行完成，运行结果详情见附件！运行时间：{time.strftime("%Y-%m-%d %H:%M:%S")}'
-    Email().send_test_report(body, report_path)
+    Email().send_test_report(body, f'{report_path}/report.zip')
 
 
 if __name__ == '__main__':
