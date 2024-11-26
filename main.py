@@ -27,13 +27,13 @@ def timer(func):
 
 @timer
 def run_tests():
-    report_path = f'result/{time.strftime("%Y%m%d-%H%M%S")}'
-    pytest.main(['-vs', '-m', "application/explorer", f'--html={report_path}/report.html'])
+    pytest.main(['-vs', '-m', "application/explorer", '--html=result/report.html'])
 
     # 调用函数来压缩目录
-    report_path = os.path.join(BASE_DIR, report_path)
-    zip_directory(report_path, f"{report_path}/report.zip")
-    Email().send_test_report("测试成功", f'{report_path}/report.zip')
+    report_path = os.path.join(BASE_DIR, "result/report.zip")
+    zip_directory(report_path, "result/report.zip")
+    body = f'ME浏览器页面元素检查程序运行完成，运行结果详情见附件！运行时间：{time.strftime("%Y-%m-%d %H:%M:%S")}'
+    Email().send_test_report(body, report_path)
 
 
 if __name__ == '__main__':

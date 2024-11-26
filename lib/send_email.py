@@ -129,4 +129,4 @@ if __name__ == '__main__':
     # report_path = "/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result.html"
     # Email().send_test_html_report(report_path)
 
-    Email().send_test_report("body", "/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result/report.zip")
+    Email().send_test_report("body", "/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result/test.zip")

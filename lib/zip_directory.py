@@ -23,11 +23,12 @@ def zip_directory(directory, zip_name):
     # 关闭 Zip 文件对象
     zipf.close()
 
+
 if __name__ == '__main__':
-    #要压缩的目录
-    directory_to_zip = '/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result/20241126-165027'
+    # 要压缩的目录
+    directory_to_zip = '/Users/zhaofeng/Documents/workers/xingcuang/explorer_autotest/result'
     # 压缩后的 Zip 文件名
-    zip_file_name = 'test.zip'
+    zip_file_name = '../result/test.zip'
 
     # 调用函数来压缩目录
     zip_directory(directory_to_zip, zip_file_name)
