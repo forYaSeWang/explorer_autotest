@@ -137,5 +137,4 @@ poetry.lock
 results
 result
 .DS_Store
-.idea/*
-.idea*
+result_zip
