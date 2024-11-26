@@ -16,7 +16,7 @@ def test_check_website_page():
             **p.devices[mobile]
         )
         page = context.new_page()
-        page.goto(config.UAT_EXPLORER_URL)
+        page.goto(config.EXPLORER_URL)
         # 检查是否跳转至website页面，且页面元素正常
         page.locator("span:nth-child(3)").first.click()
         with page.expect_popup() as page1_info:

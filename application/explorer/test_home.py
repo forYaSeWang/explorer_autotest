@@ -14,7 +14,7 @@ def test_check_home_page():
             **p.devices[mobile]
         )
         page = context.new_page()
-        page.goto(config.UAT_EXPLORER_URL)
+        page.goto(config.EXPLORER_URL)
         # 检查是否在首页，且页面元素正常
         assert "home" in page.url
         expect(page.get_by_text("Number of Validators")).to_be_visible()

@@ -16,7 +16,7 @@ def test_check_validators_page():
             **p.devices[mobile]
         )
         page = context.new_page()
-        page.goto(config.UAT_EXPLORER_URL)
+        page.goto(config.EXPLORER_URL)
         # 检查是否跳转至validators页面，且页面元素正常
         page.locator("span:nth-child(2)").first.click()
         page.get_by_text("Validators").nth(1).click()

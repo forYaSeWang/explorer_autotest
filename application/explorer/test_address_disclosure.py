@@ -12,7 +12,7 @@ def test_check_address_disclosure_page():
             **p.devices[mobile]
         )
         page = context.new_page()
-        page.goto(config.UAT_EXPLORER_URL)
+        page.goto(config.EXPLORER_URL)
         # 检查是否跳转至公式地址页面，且页面元素正常
         page.get_by_role("tab", name="Ecosystem").locator("span").click()
         with page.expect_popup() as page1_info:

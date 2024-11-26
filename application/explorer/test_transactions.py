@@ -16,7 +16,7 @@ def test_check_transactions_page():
             **p.devices[mobile]
         )
         page = context.new_page()
-        page.goto(config.UAT_EXPLORER_URL)
+        page.goto(config.EXPLORER_URL)
         # 检查是否跳转至transactions页面，且页面元素正常
         page.locator(".header_mobile_icon___1K9QD").click()
         page.get_by_text("Transactions", exact=True).nth(1).click()
