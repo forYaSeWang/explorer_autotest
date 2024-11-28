@@ -1,11 +1,7 @@
-FROM python:3.10
+FROM 0xwen/explorer-app:v1.0
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt
-# Set time synchronization between container and host
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-CMD ["sh", "-c", "python main.py && tail -f /dev/null"]
+CMD ["sh", "-c", "python3 main.py && tail -f /dev/null"]
